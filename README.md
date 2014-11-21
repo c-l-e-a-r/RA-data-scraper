@@ -10,17 +10,21 @@ An account with https://phantomjscloud.com
 ###Documentation
 ####init(key)
 Initialize using your PhantomJS Cloud key
+#####Arguments
+`key` PhantomJS Cloud API key
+#####Example
 ````
-RADataScraper.init('phantomjs_api_key');
+RADataScraper.init(key);
 ````
 
 ####getEventsByDJ(name, callback)
 Request event data based on a DJ. 
 
 #####Arguments
-`name` readonly dj name found in the url
-`callback(err, data)` data is an array of event objects with properties `date`, `name`, `venue`, and `country`
+- `name` readonly dj name found in the url
+- `callback(err, data)` data is an array of event objects with properties `date`, `name`, `venue`, and `country`
 ````
+#####Example
 RADataScraper.getEventsByDJ('djname', function (err, data) {
   // data is an array of all events
 });
