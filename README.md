@@ -2,19 +2,18 @@ RA-data-scraper
 ===============
 
 ###Note:
-This library uses PhantomJS to capture all data - it makes a lot of assumptions about the current layout and can easily break with any updates that RA makes to their templates. It acts nothing more than a bandaid for the lack of API in place at the moment.
+This library uses PhantomJS to capture all data - it an increadibly hacky solution to the lack of API in place. It makes a lot of assumptions about the current layout and can easily break with any updates that RA makes to their templates. Use with caution.
 
 ###Prerequisites
 An account with https://phantomjscloud.com
 
 ###Documentation
 ####init(key)
-Initialize using your PhantomJS Cloud key
 #####Arguments
 `key` PhantomJS Cloud API key
 #####Example
 ````
-RADataScraper.init(key);
+RADataScraper.init('b03092cbc3b322f02375c24319c596318bc7ze0d');
 ````
 
 ####getEventsByDJ(name, callback)
@@ -25,7 +24,7 @@ Request event data based on a DJ.
 - `callback(err, data)` data is an array of event objects with properties `date`, `name`, `venue`, and `country`
 ````
 #####Example
-RADataScraper.getEventsByDJ('djname', function (err, data) {
+RADataScraper.getEventsByDJ('supercooldj', function (err, data) {
   // data is an array of all events
 });
 ````
