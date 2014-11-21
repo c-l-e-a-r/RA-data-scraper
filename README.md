@@ -22,6 +22,7 @@ Request event data based on a DJ.
 #####Arguments
 - `name` readonly dj name found in the url
 - `callback(err, data)` data is an array of event objects with properties `date`, `name`, `venue`, and `country`
+
 #####Example
 ````
 RADataScraper.getEventsByDJ('supercooldj', function (err, data) {
