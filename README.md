@@ -7,7 +7,7 @@ This library uses PhantomJS to capture all data - it makes a lot of assumptions 
 ###Prerequisites
 An account with https://phantomjscloud.com
 
-###Getting Started
+###Documentation
 ####init(key)
 Initialize using your PhantomJS Cloud key
 ````
@@ -16,7 +16,9 @@ RADataScraper.init('phantomjs_api_key');
 
 ####getEventsByDJ(name, callback)
 Request event data based on a DJ. 
-`name` needs to be the readonly dj name found in the url
+
+#####Arguments
+`name` readonly dj name found in the url
 `callback(err, data)` data is an array of event objects with properties `date`, `name`, `venue`, and `country`
 ````
 RADataScraper.getEventsByDJ('djname', function (err, data) {
